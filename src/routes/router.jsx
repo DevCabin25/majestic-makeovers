@@ -7,10 +7,11 @@ import Register from "../components/Register/Register";
 const router = createBrowserRouter([
     {
         path: '/',
+      
         element: <Root></Root>,
         children: [
             {
-                index: true,
+                index: '/',
                 element: <Home></Home>
             },
             {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
         ]
-    }
-])
+     }
+ ])
 
 export default router;
