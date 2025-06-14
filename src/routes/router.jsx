@@ -7,7 +7,7 @@ import Register from "../components/Register/Register";
 const router = createBrowserRouter([
     {
         path: '/',
-      
+    
         element: <Root></Root>,
         children: [
             {

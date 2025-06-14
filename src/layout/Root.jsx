@@ -8,13 +8,14 @@ import { Outlet } from 'react-router-dom';
 const Root = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <div>
-             <Outlet/>
-             
-            </div>
-            <Footer></Footer>
-        </div>
+      <Navbar></Navbar>
+
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+
+      <Footer></Footer>
+    </div>
     );
 };
 
