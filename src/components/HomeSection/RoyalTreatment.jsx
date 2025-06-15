@@ -14,8 +14,6 @@ const RoyalTreatment = () => {
             Book your appointment today and step into a world of luxury,
             elegance, and unparalleled beauty services.
           </p>
-
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="btn bg-[#EBDA1E] hover:bg-blue-100 border-0 shadow-md flex items-center gap-2">
               Schedule Appointment
