@@ -3,6 +3,7 @@ import Root from "../layout/Root";
 import Home from "../components/Home/Home";
 import SignIn from "../components/SignIn/SignIn";
 import Register from "../components/Register/Register";
+import About from "../components/About/About";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,18 @@ const router = createBrowserRouter([
             {
                 index: '/',
                 element: <Home></Home>
+            },
+            {
+                path: '/service',
+                element: <Home></Home>
+            },
+            {
+                path: '/about',
+                element: <About></About>
+            },
+            {
+                path: '/contact',
+                element: <></>
             },
             {
                 path: 'signin',

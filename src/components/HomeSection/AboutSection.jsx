@@ -4,7 +4,7 @@ import { IoIosStarOutline } from "react-icons/io";
 import { GiSelfLove } from "react-icons/gi";
 import { FaCrown } from "react-icons/fa";
 
-const About = () => {
+const AboutSection = () => {
   return (
     <div>
       <div className="hero bg-[#FDF8F3] min-h-screen">
@@ -62,4 +62,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;
