@@ -38,7 +38,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/events"
+                to="/service"
                 className="text-gray-950 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Services

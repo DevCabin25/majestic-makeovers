@@ -4,6 +4,8 @@ import Home from "../components/Home/Home";
 import SignIn from "../components/SignIn/SignIn";
 import Register from "../components/Register/Register";
 import About from "../components/About/About";
+import Contact from "../components/Contact/Contact";
+import Service from "../components/Service/Service";
 
 const router = createBrowserRouter([
     {
@@ -12,12 +14,12 @@ const router = createBrowserRouter([
         element: <Root></Root>,
         children: [
             {
-                index: '/',
+                path: '/',
                 element: <Home></Home>
             },
             {
                 path: '/service',
-                element: <Home></Home>
+                element: <Service></Service>
             },
             {
                 path: '/about',
@@ -25,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <></>
+                element: <Contact></Contact>
             },
             {
                 path: 'signin',
