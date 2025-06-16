@@ -5,7 +5,7 @@ const Banner = () => {
     <div
       className="hero min-h-screen bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('/public/banner.png')",
+        backgroundImage: "url('../../../public/banner.png')",
       }}
     >
       <div className="absolute inset-0 bg-gray-200 bg-opacity-60 z-0"></div>
