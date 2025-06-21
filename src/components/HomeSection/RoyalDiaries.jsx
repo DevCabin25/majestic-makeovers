@@ -4,29 +4,29 @@ const blogData = [
   {
     title: "The Royal Guide to Skincare!",
     date: "June 15, 2025",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    description:
-      "Secrets to radiant skin with expert tips and luxury treatments.",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    description: "Secrets to radiant skin with expert tips and luxury treatments.",
     buttonText: "Read Now",
+    readTime: "6 min read",
   },
   {
     title: "Bridal Beauty: Wedding Day Timeline",
     date: "May 28, 2025",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     description: "Guide to beauty treatments for the perfect wedding look.",
     buttonText: "Explore",
+    readTime: "5 min read",
   },
   {
     title: "Spring Hair Trends 2024",
     date: "April 5, 2025",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     description: "Hot spring hair styles: cuts, colors, and textures.",
     buttonText: "Read More",
+    readTime: "7 min read",
   },
 ];
+
 
 const RoyalDiaries = () => {
   return (
@@ -34,7 +34,7 @@ const RoyalDiaries = () => {
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Royal Diaries</h1>
         <p className="text-gray-600 text-sm">
-          Stay updated with the latest beauty trends, tips, and royal <br />{" "}
+          Stay updated with the latest beauty trends, tips, and royal <br />
           insights from our expert beauticians
         </p>
       </div>
@@ -45,29 +45,43 @@ const RoyalDiaries = () => {
             key={idx}
             className="bg-base-100 shadow-md rounded-lg overflow-hidden transition hover:shadow-xl hover:scale-[1.02] duration-300 w-[280px] mx-auto"
           >
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-[120px]  object-cover"
-            />
+            <div className="relative">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-[120px] object-cover "
+              />
+              <span
+                className="absolute top-2 right-2 px-2 py-1 text-[10px] font-semibold text-white rounded"
+                style={{
+                  background: "linear-gradient(90deg, #FFD700 0%, #FFA500 100%)",
+                  boxShadow: "0 0 5px #FFA500",
+                }}
+              >
+                {blog.readTime}
+              </span>
+            </div>
+
             <div className="p-3">
-              <p className="text-xs text-gray-500 mb-1">{blog.date}</p>
+              <p className="text-xs mb-1 text-primary">{blog.date}</p>
               <h2 className="text-sm font-bold text-gray-800 leading-snug mb-1">
                 {blog.title}
               </h2>
               <p className="text-xs text-gray-600 mb-3">{blog.description}</p>
-              <button className="btn btn-xs btn-primary">
+              <button className="btn btn-xs btn-primary btn-outline">
                 {blog.buttonText}
               </button>
             </div>
           </div>
         ))}
       </div>
+
       <div className="flex justify-center mt-6">
         <button className="btn btn-warning"> View All Articles</button>
       </div>
     </div>
   );
 };
+
 
 export default RoyalDiaries;

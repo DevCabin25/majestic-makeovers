@@ -1,19 +1,28 @@
 import React from "react";
 
+// ✅ Individual Card Component
 const PricingCard = ({ title, price, features, color, buttonLabel }) => {
   return (
-    <div className="relative bg-white shadow-xl rounded-xl p-5 w-[300px] mx-auto group transition-transform transform hover:scale-105 duration-300 border-2 border-transparent hover:border-[#DFD138]">
-      <h2 className={`text-2xl font-bold text-center mb-1 text-[${color}]`}>
-        {title}
-      </h2>
-      <p className="text-lg font-semibold text-[#2E7D32] text-center mb-3">
-        £{price}
-      </p>
-      <ul className="text-sm text-gray-700 space-y-1">
-        {features.map((item, idx) => (
-          <li key={idx}>• {item}</li>
-        ))}
-      </ul>
+    <div className="relative bg-white shadow-xl rounded-xl p-5 w-[300px] mx-auto group transition-transform transform hover:scale-105 duration-300 border-2 border-transparent hover:border-[#DFD138] flex flex-col justify-between h-full">
+      {/* 🟩 Upper content */}
+      <div>
+        <h2
+          className="text-2xl font-bold text-center mb-1"
+          style={{ color }}
+        >
+          {title}
+        </h2>
+        <p className="text-lg font-semibold text-[#2E7D32] text-center mb-3">
+          £{price}
+        </p>
+        <ul className="text-sm text-gray-700 space-y-1">
+          {features.map((item, idx) => (
+            <li key={idx}>• {item}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* 🟦 Bottom button - always aligned */}
       <div className="mt-4">
         <button className="btn btn-primary w-full">{buttonLabel}</button>
       </div>
@@ -21,6 +30,7 @@ const PricingCard = ({ title, price, features, color, buttonLabel }) => {
   );
 };
 
+// ✅ Pricing Section Component
 const RoyalPricing = () => {
   const packages = [
     {
@@ -72,6 +82,8 @@ const RoyalPricing = () => {
           the royal treatment you deserve
         </p>
       </div>
+
+      {/* 🟨 Grid to hold all cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {packages.map((pkg, idx) => (
           <PricingCard

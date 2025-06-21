@@ -10,7 +10,7 @@ const AboutSection = () => {
       <div className="hero bg-[#FDF8F3] min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="../../../public/banner.png"
+            src="banner.png"
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>

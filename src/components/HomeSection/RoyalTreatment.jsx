@@ -15,12 +15,13 @@ const RoyalTreatment = () => {
             elegance, and unparalleled beauty services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="btn bg-[#EBDA1E] hover:bg-blue-100 border-0 shadow-md flex items-center gap-2">
+            <button className="btn bg-[#EBDA1E] rounded-xl hover:bg-blue-100 border-0 shadow-md flex items-center gap-2">
               Schedule Appointment
             </button>
-            <button className="btn bg-white text-[#F95499] hover:bg-pink-100 border-0 shadow-md flex items-center gap-2">
-              Call Us Now
-            </button>
+         <button className="btn btn-outline text-black border-yellow-200 hover:bg-pink-400 shadow-md flex items-center gap-2">
+  Call Us Now
+</button>
+
           </div>
         </div>
       </div>

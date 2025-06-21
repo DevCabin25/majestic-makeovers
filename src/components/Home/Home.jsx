@@ -7,12 +7,14 @@ import RoyalDiaries from '../HomeSection/RoyalDiaries';
 import Banner from '../HomeSection/Banner';
 import About from '../HomeSection/AboutSection';
 import AboutSection from '../HomeSection/AboutSection';
+import Transform from '../Transform/Transform';
 
 const Home = () => {
     return (
         <div>
          <Banner></Banner>
          <ServicesSection></ServicesSection>
+         <Transform></Transform>
          <AboutSection></AboutSection>
          <RoyalPricing></RoyalPricing>
          <RoyalTreatment></RoyalTreatment>
