@@ -10,13 +10,14 @@ const ServicesSection = () => {
           royalty
         </p>
         {/* Card section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5 justify-center text-[#000000]">
+        <div className="h-fullflex items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5 justify-center text-[#000000]">
           {/* Card 1 */}
-          <div className="card bg-base-100 shadow-xl w-[237px] h-[242px] mx-auto">
+          <div className="card bg-base-100  shadow-xl w-[237px] h-[242px] mx-auto">
             <figure className="pt-4">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Face & Skin"
+                alt=" & Skin"
                 className="rounded-4xl w-[46px] h-[46px] object-cover"
               />
             </figure>
@@ -75,6 +76,7 @@ const ServicesSection = () => {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
