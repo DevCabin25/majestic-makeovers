@@ -5,7 +5,7 @@ import SignIn from "../components/SignIn/SignIn";
 import Register from "../components/Register/Register";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
-import Service from "../components/Service/Service";
+import Service from "../components/Gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/service',
+                path: '/gallery',
                 element: <Service></Service>
             },
             {

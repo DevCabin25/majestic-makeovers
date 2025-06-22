@@ -38,10 +38,10 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/service"
+                to="/gallery"
                 className="text-gray-950 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                Services
+                Gallery
               </Link>
               <Link
                 to="/about"
