@@ -1,85 +1,66 @@
 import React from "react";
 
+// ✅ JSON data
+const servicesData = [
+  {
+    title: "Face & Skin",
+    description:
+      "Rejuvenating facials, anti-aging treatments, and personalized skincare routines.",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+  },
+  {
+    title: "Hair",
+    description:
+      "Expert styling, coloring, treatments, and luxury hair transformations.",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+  },
+  {
+    title: "Nails",
+    description:
+      "Manicures, pedicures, nail art, and premium nail care treatments.",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+  },
+  {
+    title: "Makeup",
+    description:
+      "Bridal, event, and editorial makeup to enhance your natural beauty.",
+    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+  },
+];
+
 const ServicesSection = () => {
   return (
-    <div className=" mt-5">
-      <div className="text-center">
-        <h1 className="text-5xl text-[#000000] font-bold mb-2">Our Royal Services</h1>
-        <p className="text-[#000000] font-semibold mb-5">
-          Experience luxury beauty treatments crafted to make you feel like
-          royalty
-        </p>
-        {/* Card section */}
-        <div className="h-fullflex items-center">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5 justify-center text-[#000000]">
-          {/* Card 1 */}
-          <div className="card bg-base-100  shadow-xl w-[237px] h-[242px] mx-auto">
-            <figure className="pt-4">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt=" & Skin"
-                className="rounded-4xl w-[46px] h-[46px] object-cover"
-              />
-            </figure>
-            <div className="card-body items-center text-center p-4 font-sans">
-              <h2 className="card-title text-sm ">Face & Skin</h2>
-              <p className="text-xs text-center">
-                Rejuvenating facials, anti-aging treatments, and personalized skincare routines
-              </p>
-            </div>
-          </div>
-          {/* Card 2 */}
-          <div className="card bg-base-100 shadow-xl w-[237px] h-[242px] mx-auto">
-            <figure className="pt-4">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Hair"
-                className="rounded-4xl w-[46px] h-[46px] object-cover"
-              />
-            </figure>
-            <div className="card-body items-center text-center p-4">
-              <h2 className="card-title text-sm">Hair</h2>
-              <p className="text-xs text-center">
-                Expert styling, coloring, treatments, and luxury hair transformations
-              </p>
-            </div>
-          </div>
-          {/* Card 3 */}
-          <div className="card bg-base-100 shadow-xl w-[237px] h-[242px] mx-auto">
-            <figure className="pt-4">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Nails"
-                className="rounded-4xl w-[46px] h-[46px] object-cover"
-              />
-            </figure>
-            <div className="card-body items-center text-center p-4">
-              <h2 className="card-title text-sm">Nails</h2>
-              <p className="text-xs text-center">
-                Expert styling, coloring, treatments, and luxury hair transformations
-              </p>
-            </div>
-          </div>
-          {/* Card 4 */}
-          <div className="card bg-base-100 shadow-xl w-[237px] h-[242px] mx-auto">
-            <figure className="pt-4">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Makeup"
-                className="rounded-4xl w-[46px] h-[46px] object-cover"
-              />
-            </figure>
-            <div className="card-body items-center text-center p-4">
-              <h2 className="card-title text-sm">Makeup</h2>
-              <p className="text-xs text-center">
-                Manicures, pedicures, nail art, and premium nail care treatments
-              </p>
-            </div>
-          </div>
+    <section className="py-16 bg-gradient-to-br from-white to-pink-50">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-gray-800">Our Royal Services</h2>
+          <p className="text-gray-600 mt-2">
+            Experience luxury beauty treatments crafted to make you feel like royalty.
+          </p>
         </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {servicesData.map((service, index) => (
+           <div
+  key={index}
+  className="bg-white/80 backdrop-blur-md border border-pink-200 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transform transition duration-300 p-6 text-center min-h-[280px] sm:min-h-[320px] flex flex-col justify-center"
+>
+              <div className="flex justify-center mb-4">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-16 h-16 rounded-full object-cover border-4 border-pink-200 shadow-md"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-pink-700">{service.title}</h3>
+              <p className="mt-2 text-sm text-gray-700">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

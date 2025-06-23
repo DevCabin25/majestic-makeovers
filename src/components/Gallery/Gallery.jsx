@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { useLoaderData } from "react-router";
 
 const Gallery = () => {
+  const imageData = useLoaderData();
+  const [filteredImages, setFilteredImages] = useState(imageData);
+  const [activeType, setActiveType] = useState("All");
+
+  const handleImageByType = (type) => {
+    setActiveType(type);
+    if (type === "All") {
+      setFilteredImages(imageData);
+    } else {
+      const filtered = imageData.filter((item) => item.type === type);
+      setFilteredImages(filtered);
+    }
+  };
+
   return (
     <div className="bg-[#FFFFFF] py-16 px-4 sm:px-8">
       <div className="text-center mb-10">
@@ -11,14 +26,16 @@ const Gallery = () => {
 
         {/* Filter Buttons */}
         <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <button className="btn bg-[#EBDA1EB2] text-black hover:scale-105 transition-transform duration-200">
-            All
-          </button>
-          {["Bridal", "Professional", "Glamour", "Natural", "Evening"].map(
+          {["All", "Bridal", "Professional", "Glamour", "Natural", "Evening"].map(
             (label, idx) => (
               <button
                 key={idx}
-                className="btn text-[#FEE900] border border-[#FEE900] bg-transparent hover:bg-[#FEE900] hover:text-black transition"
+                onClick={() => handleImageByType(label)}
+                className={`btn transition duration-200 ${
+                  activeType === label
+                    ? "bg-[#FEE900] text-black border border-[#FEE900]"
+                    : "text-[#FEE900] border border-[#FEE900] bg-transparent hover:bg-[#FEE900] hover:text-black"
+                }`}
               >
                 {label}
               </button>
@@ -26,22 +43,20 @@ const Gallery = () => {
           )}
         </div>
 
-        {/* Card Information */}
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 justify-items-center">
-          {[1, 2, 3].map((_, idx) => (
+          {filteredImages.map((item) => (
             <div
-              key={idx}
-              className="bg-[#B13434] rounded-[10px] text-white p-4"
-              style={{ width: "393px", height: "190px" }}
-            ></div>
-          ))}
-
-          {[4, 5, 6].map((_, idx) => (
-            <div
-              key={idx}
-              className="bg-[#EBDA1E] rounded-[10px] text-black p-4"
-              style={{ width: "393px", height: "190px" }}
-            ></div>
+              key={item.id}
+              className="rounded-[10px] overflow-hidden shadow-md"
+              style={{ width: "393px", height: "260px" }}
+            >
+              <img
+                src={item.image}
+                alt={item.type}
+                className="w-full h-full object-cover"
+              />
+            </div>
           ))}
         </div>
       </div>

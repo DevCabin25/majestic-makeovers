@@ -41,38 +41,39 @@ const RoyalDiaries = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogData.map((blog, idx) => (
-          <div
-            key={idx}
-            className="bg-base-100 shadow-md rounded-lg overflow-hidden transition hover:shadow-xl hover:scale-[1.02] duration-300 w-[280px] mx-auto"
-          >
-            <div className="relative">
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full h-[120px] object-cover "
-              />
-              <span
-                className="absolute top-2 right-2 px-2 py-1 text-[10px] font-semibold text-white rounded"
-                style={{
-                  background: "linear-gradient(90deg, #FFD700 0%, #FFA500 100%)",
-                  boxShadow: "0 0 5px #FFA500",
-                }}
-              >
-                {blog.readTime}
-              </span>
-            </div>
+         <div
+  key={idx}
+  className="bg-base-100 shadow-md rounded-lg overflow-hidden transition hover:shadow-xl hover:scale-[1.04] duration-300 max-w-sm mx-auto w-full"
+>
+  <div className="relative">
+    <img
+      src={blog.image}
+      alt={blog.title}
+      className="w-full h-40 object-cover"
+    />
+    <span
+      className="absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded"
+      style={{
+        background: "linear-gradient(90deg, #FFD700 0%, #FFA500 100%)",
+        boxShadow: "0 0 5px #FFA500",
+      }}
+    >
+      {blog.readTime}
+    </span>
+  </div>
 
-            <div className="p-3">
-              <p className="text-xs mb-1 text-primary">{blog.date}</p>
-              <h2 className="text-sm font-bold text-gray-800 leading-snug mb-1">
-                {blog.title}
-              </h2>
-              <p className="text-xs text-gray-600 mb-3">{blog.description}</p>
-              <button className="btn btn-xs btn-primary btn-outline">
-                {blog.buttonText}
-              </button>
-            </div>
-          </div>
+  <div className="p-4">
+    <p className="text-xs mb-1 text-primary">{blog.date}</p>
+    <h2 className="text-base font-semibold text-gray-800 leading-snug mb-2">
+      {blog.title}
+    </h2>
+    <p className="text-sm text-gray-600 mb-4">{blog.description}</p>
+    <button className="btn btn-xs btn-primary btn-outline">
+      {blog.buttonText}
+    </button>
+  </div>
+</div>
+
         ))}
       </div>
 
