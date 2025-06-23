@@ -1,43 +1,40 @@
 import React from 'react';
 
-const PricingCard = ({ title, price, features, color, buttonLabel }) => {
+const PricingCard = ({ title, price, features,  buttonLabel }) => {
   return (
-    <div className="px-10">
-      <div
-        className="relative bg-white shadow-xl rounded-xl px-8 py-10 w-full mx-auto group 
-                   transition-transform transform 
-                   hover:scale-105 
-                   hover:shadow-2xl 
-                   hover:border-[#DFD138] 
-                   border-2 border-transparent 
-                   flex flex-col h-full
-                   hover:brightness-105"
-        style={{ transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)" }}
-      >
-     
-        <div className="flex-grow flex flex-col justify-between">
+    <div className="px-4 sm:px-6 lg:px-8">
+      <div className="relative rounded-2xl bg-white/80 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        {/* Top Decorative Border */}
+        <div className="h-6 w-full bg-gradient-to-r from-yellow-300 to-[#DFD138] rounded-t-2xl" />
+
+        <div className="p-8 flex flex-col justify-between h-full">
+          {/* Title and Price */}
           <div>
-            <h2
-              className="text-3xl font-extrabold text-center mb-3"
-              style={{ color }}
-            >
+            <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
               {title}
             </h2>
-            <p className="text-2xl font-semibold text-green-800 text-center mb-6">
+            <p className="text-3xl font-extrabold text-center text-green-700 mb-6">
               £{price}
+              <span className="text-sm text-gray-600 font-normal"> /mo</span>
             </p>
-            <ul className="text-base text-gray-800 space-y-3 pl-5 list-disc list-inside leading-relaxed">
+
+            {/* Features List */}
+            <ul className="text-gray-700 text-sm space-y-3 list-disc list-inside leading-relaxed">
               {features.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
             </ul>
           </div>
-        </div>
 
-        <div className="mt-8">
-          <button className="btn btn-primary w-full text-lg font-semibold">
-            {buttonLabel}
-          </button>
+          {/* Call to Action Button */}
+          <div className="mt-8">
+            <button
+              className="w-full py-3 rounded-lg text-black font-semibold text-lg transition hover:brightness-110"
+              style={{ backgroundColor: "#DFD138" }}
+            >
+              {buttonLabel}
+            </button>
+          </div>
         </div>
       </div>
     </div>
