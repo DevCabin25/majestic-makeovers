@@ -6,25 +6,25 @@ const servicesData = [
     title: "Face & Skin",
     description:
       "Rejuvenating facials, anti-aging treatments, and personalized skincare routines.",
-    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    image: "https://i.ibb.co/nsLyxqtB/young-woman-with-eye-patches-touching-temples-isolated-gray-wall-cosmetics-skin-stress-concept-50.jpg",
   },
   {
     title: "Hair",
     description:
       "Expert styling, coloring, treatments, and luxury hair transformations.",
-    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    image: "https://i.ibb.co/Gvs11DJx/beauty-portrait-pretty-ginger-woman-with-long-hair-touching-her-hair-looking-away-50.jpg",
   },
   {
     title: "Nails",
     description:
       "Manicures, pedicures, nail art, and premium nail care treatments.",
-    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    image: "https://i.ibb.co/S44GwXj3/woman-showing-her-beautiful-nails.jpg",
   },
   {
     title: "Makeup",
     description:
       "Bridal, event, and editorial makeup to enhance your natural beauty.",
-    image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    image: "https://i.ibb.co/LXCKjY3M/make-up-artist-getting-model-ready-photoshootin.jpg",
   },
 ];
 
@@ -43,20 +43,27 @@ const ServicesSection = () => {
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesData.map((service, index) => (
-           <div
+          <div
   key={index}
-  className="bg-white/80 backdrop-blur-md border border-pink-200 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transform transition duration-300 p-6 text-center min-h-[280px] sm:min-h-[320px] flex flex-col justify-center"
+  className="relative group overflow-hidden rounded-2xl shadow-xl border border-pink-200 min-h-[280px] sm:min-h-[320px] transform transition duration-300 hover:scale-[1.02]"
+  style={{
+    backgroundImage: `url(${service.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
 >
-              <div className="flex justify-center mb-4">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-16 h-16 rounded-full object-cover border-4 border-pink-200 shadow-md"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-pink-700">{service.title}</h3>
-              <p className="mt-2 text-sm text-gray-700">{service.description}</p>
-            </div>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+  {/* Content */}
+  <div className="relative z-10 flex flex-col justify-center items-center text-center text-white p-6 h-full">
+    <h3 className="text-xl font-semibold">{service.title}</h3>
+    <p className="mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      {service.description}
+    </p>
+  </div>
+</div>
+
           ))}
         </div>
       </div>
