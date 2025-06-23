@@ -20,7 +20,7 @@ const Map = () => {
   if (!isLoaded) return <div className="text-blue-500">Loading map...</div>;
 
   return (
-    <div className="rounded-xl shadow-lg overflow-hidden border border-gray-300 h-[300px] w-[400px]">
+    <div className="rounded-xl shadow-lg overflow-hidden border border-gray-300 h-[300px] w-[350px] mx-auto">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}

@@ -62,8 +62,8 @@ const Footer = () => {
         </div>
 
         {/* Right Side (Map) */}
-        <div className="w-full lg:w-1/2">
-          <div className="w-full md:w-10/12 text-xl font-bold mx-auto">
+        <div className="max-w-xl ">
+          <div className=" text-xl font-bold mx-auto">
             <p className="mb-4">Find Our Royal Palace</p>
             <Map />
           </div>
