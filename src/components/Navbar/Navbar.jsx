@@ -121,18 +121,18 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/events"
+            to="/gallery"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
           >
-            Events
+            Gallery
           </Link>
           <Link
             to="/about"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
           >
-            About
+            About Us
           </Link>
           <Link
             to="/contact"
@@ -142,11 +142,11 @@ const Navbar = () => {
             Contact
           </Link>
           <Link
-            to="/login"
+            to="/contact"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-purple-600 hover:bg-purple-700"
             onClick={() => setIsMenuOpen(false)}
           >
-            Login
+            Get Started
           </Link>
         </div>
       </div>
