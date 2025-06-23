@@ -16,10 +16,10 @@ const Banner = () => {
             Step into elegance, walk out like royalty.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="btn bg-[#DFD138] text-black btn-sm rounded-xl font-semibold hover:bg-yellow-400 transition">
+            <button className="btn bg-[#DFD138] text-black btn-md rounded-xl font-semibold hover:bg-yellow-400 transition">
               Book Now
             </button>
-            <button className="btn btn-outline border border-[#FFFFFF] text-white rounded-xl btn-sm hover:bg-[##FFFFFF] hover:text-black transition">
+            <button className="btn btn-outline border border-[#FFFFFF] text-white rounded-xl btn-md hover:bg-[##FFFFFF] hover:text-black transition">
               View Services
             </button>
           </div>

@@ -1,62 +1,70 @@
 import React from "react";
-import { FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaCrown } from "react-icons/fa";
 import { IoIosStarOutline } from "react-icons/io";
 import { GiSelfLove } from "react-icons/gi";
-import { FaCrown } from "react-icons/fa";
 
 const AboutSection = () => {
   return (
-    <div>
-      <div className="hero bg-[#FDF8F3] min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <img
-            src="banner.png"
-            className="max-w-sm rounded-lg shadow-2xl"
-          />
+    <div className="bg-[#FDF8F3] py-14">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-12">
+     
+        <div className="text-center lg:text-left max-w-2xl">
+          
+          <h1 className="text-3xl sm:text-4xl font-bold">
+            About <span className="text-[#EBDA1E]">Majestic Makeover</span>
+          </h1>
+
+          <p className="mt-4 text-base sm:text-lg text-gray-700">
+            Where luxury meets artistry, and every treatment is a royal
+            experience.
+          </p>
+
+          <p className="mt-3 text-gray-600 leading-relaxed">
+            Founded to turn beauty into a royal journey, <br className="hidden md:inline" />
+            Majestic Makeover is the destination for those seeking the finest
+            wellness experience.
+          </p>
+
+          <p className="mt-3 text-gray-600 leading-relaxed">
+            Our team merges tradition with innovation, <br className="hidden md:inline" />
+            using only the highest quality products.
+          </p>
+
+          {/*  Features */}
+          <div className="mt-8 flex  justify-around gap-y-4 sm:gap-5 text-center sm:text-left">
+            <div>
+              <div className="flex items-center justify-center gap-2 basis-1/2 sm:basis-auto">
+              <FaRegStar className="text-xl text-yellow-500" />
+              <span className="font-medium text-gray-800">Expert Artisans</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 basis-1/2 sm:basis-auto">
+              <IoIosStarOutline className="text-xl text-yellow-500" />
+              <span className="font-medium text-gray-800">Premium Products</span>
+            </div>
+            </div>
+            
           <div>
-            <h1 className="text-5xl font-bold">
-              About <span className="text-[#EBDA1E]">Majestic Makeover</span>
-            </h1>
-            <p className="py-6">
-              Where luxury meets artistry, and every treatment is a royal
-              experience.
-            </p>
-            <p>
-              Founded with a vision to transform beauty experiences into royal
-              journeys, <br /> Majestic Makeover has been the premier
-              destination for discerning clients who seek <br /> nothing but the
-              finest in beauty and wellness services.
-            </p>
-            <p className="mt-5">
-              Our team of skilled artisans combines traditional techniques with
-              modern innovation,
-              <br /> using only the highest quality products to ensure every
-              client leaves feeling like royalty.
-            </p>
-            <div className="mt-12">
-              <div className="flex justify-between mb-3">
-                <div className="flex gap-4">
-                  <FaRegStar className="mt-1"></FaRegStar>
-                  <h1> Expert Artisans</h1>
-                </div>
-                <div className="flex gap-4">
-                  <IoIosStarOutline className="mt-1"></IoIosStarOutline>
-                  <h1>Premium Products</h1>
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <div className="flex gap-4">
-                  <GiSelfLove className="mt-1"></GiSelfLove>
-                  <h1> Personalized Care</h1>
-                </div>
-                <div className="flex gap-4">
-                  <FaCrown className="mt-1"></FaCrown>
-                  <h1> Royal Treatment</h1>
-                </div>
-              </div>
+              <div className="flex items-center justify-center gap-2 basis-1/2 sm:basis-auto">
+              <GiSelfLove className="text-xl text-pink-500" />
+              <span className="font-medium text-gray-800">Personalized Care</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 basis-1/2 sm:basis-auto">
+              <FaCrown className="text-xl text-purple-500" />
+              <span className="font-medium text-gray-800">Royal Treatment</span>
             </div>
           </div>
+          </div>
+
         </div>
+
+        {/*  Image */}
+        <img
+          src="banner.png"
+          alt="Majestic Makeover"
+          className="w-[80%] sm:w-96 mx-auto rounded-xl shadow-xl"
+        />
+
+
       </div>
     </div>
   );
