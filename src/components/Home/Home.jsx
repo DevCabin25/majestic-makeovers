@@ -8,11 +8,13 @@ import Banner from '../HomeSection/Banner';
 import About from '../HomeSection/AboutSection';
 import AboutSection from '../HomeSection/AboutSection';
 import Transform from '../Transform/Transform';
+import Featuress from '../Featuress/Featuress';
 
 const Home = () => {
     return (
         <div>
          <Banner></Banner>
+         <Featuress/>
          <ServicesSection></ServicesSection>
          <Transform></Transform>
          <AboutSection></AboutSection>
