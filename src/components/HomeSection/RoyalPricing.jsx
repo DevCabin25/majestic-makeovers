@@ -1,36 +1,6 @@
 import React from "react";
+import PricingCard from "./PricingCard";
 
-// ✅ Individual Card Component
-const PricingCard = ({ title, price, features, color, buttonLabel }) => {
-  return (
-    <div className="relative bg-white shadow-xl rounded-xl p-5 w-[300px] mx-auto group transition-transform transform hover:scale-105 duration-300 border-2 border-transparent hover:border-[#DFD138] flex flex-col justify-between h-full">
-      {/* 🟩 Upper content */}
-      <div>
-        <h2
-          className="text-2xl font-bold text-center mb-1"
-          style={{ color }}
-        >
-          {title}
-        </h2>
-        <p className="text-lg font-semibold text-[#2E7D32] text-center mb-3">
-          £{price}
-        </p>
-        <ul className="text-sm text-gray-700 space-y-1">
-          {features.map((item, idx) => (
-            <li key={idx}>• {item}</li>
-          ))}
-        </ul>
-      </div>
-
-      {/* 🟦 Bottom button - always aligned */}
-      <div className="mt-4">
-        <button className="btn btn-primary w-full">{buttonLabel}</button>
-      </div>
-    </div>
-  );
-};
-
-// ✅ Pricing Section Component
 const RoyalPricing = () => {
   const packages = [
     {
@@ -74,7 +44,7 @@ const RoyalPricing = () => {
   ];
 
   return (
-    <div className="mt-10 px-4 mb-10">
+    <div className="mt-10  mb-10">
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-[#000000]">Royal Pricing</h1>
         <p className="text-lg font-medium text-gray-700">
