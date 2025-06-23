@@ -11,6 +11,7 @@ const RoyalPricing = () => {
         "Anti-aging treatment",
         "Moisturizing mask",
         "Professional makeup",
+        "Professional makeup",
       ],
       color: "#DFD138",
       buttonLabel: "Book Royal Glow",
@@ -21,6 +22,9 @@ const RoyalPricing = () => {
       features: [
         "Complete hair styling",
         "Professional makeup",
+        "Luxury facial treatment",
+        "Manicure & pedicure",
+        "Complimentary refreshments",
         "Luxury facial treatment",
         "Manicure & pedicure",
         "Complimentary refreshments",
@@ -54,7 +58,7 @@ const RoyalPricing = () => {
       </div>
 
       {/* 🟨 Grid to hold all cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-3 gap-6">
         {packages.map((pkg, idx) => (
           <PricingCard
             key={idx}
