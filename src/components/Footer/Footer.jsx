@@ -62,18 +62,21 @@ const Footer = () => {
         </div>
 
         {/* Right Side (Map) */}
-        <div className="max-w-xl ">
-          <div className=" text-xl font-bold mx-auto">
-            <p className="mb-4">Find Our Royal Palace</p>
-            <Map />
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full max-w-md">
+            <p className="mb-4 text-xl font-bold text-center lg:text-left">
+              Find Our Royal Palace
+            </p>
+            <div className="w-full h-64 lg:h-80 rounded overflow-hidden shadow-lg">
+              <Map />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom copyright */}
       <div className="mt-10 text-center text-sm border-t border-gray-600 pt-6">
-        © {new Date().getFullYear()} Majestic Makeover. All rights reserved.
-        Where beauty meets royalty.
+        © {new Date().getFullYear()} Majestic Makeover. All rights reserved. Where beauty meets royalty.
       </div>
     </footer>
   );
