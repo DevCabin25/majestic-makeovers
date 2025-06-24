@@ -23,9 +23,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-[#dfd138]">
-            MAJESTIC
-            </span>
+            <span className="text-2xl font-bold text-[#dfd138]">MAJESTIC</span>
           </Link>
 
           {/* Desktop Menu - Centered */}
@@ -50,6 +48,18 @@ const Navbar = () => {
                 About
               </Link>
               <Link
+                to="/service"
+                className="text-gray-950 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                Service
+              </Link>
+              <Link
+                to="/blog"
+                className="text-gray-950 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                Blog
+              </Link>
+              <Link
                 to="/contact"
                 className="text-gray-950 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
@@ -61,7 +71,7 @@ const Navbar = () => {
           {/* Login Button */}
           <div className="hidden md:block">
             <Link
-              to="/login"
+              to="/contact"
               className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Get Started
@@ -133,6 +143,20 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             About Us
+          </Link>
+          <Link
+            to="/service"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Service
+          </Link>
+          <Link
+            to="/blog"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Blog
           </Link>
           <Link
             to="/contact"
