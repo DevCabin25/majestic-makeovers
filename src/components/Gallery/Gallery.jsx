@@ -26,21 +26,26 @@ const Gallery = () => {
 
         {/* Filter Buttons */}
         <div className="mt-5 flex flex-wrap justify-center gap-3">
-          {["All", "Bridal", "Professional", "Glamour", "Natural", "Evening"].map(
-            (label, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleImageByType(label)}
-                className={`btn transition duration-200 ${
-                  activeType === label
-                    ? "bg-[#FEE900] text-black border border-[#FEE900]"
-                    : "text-[#FEE900] border border-[#FEE900] bg-transparent hover:bg-[#FEE900] hover:text-black"
-                }`}
-              >
-                {label}
-              </button>
-            )
-          )}
+          {[
+            "All",
+            "Bridal",
+            "Professional",
+            "Glamour",
+            "Natural",
+            "Evening",
+          ].map((label, idx) => (
+            <button
+              key={idx}
+              onClick={() => handleImageByType(label)}
+              className={`btn transition duration-200 ${
+                activeType === label
+                  ? "bg-[#FEE900] text-black border border-[#FEE900]"
+                  : "text-[#FEE900] border border-[#FEE900] bg-transparent hover:bg-[#FEE900] hover:text-black"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         {/* Gallery Grid */}
@@ -48,8 +53,7 @@ const Gallery = () => {
           {filteredImages.map((item) => (
             <div
               key={item.id}
-              className="rounded-[10px] overflow-hidden shadow-md"
-              style={{ width: "393px", height: "260px" }}
+              className="rounded-[10px] overflow-hidden shadow-md w-full max-w-sm h-64 md:h-60 lg:h-64"
             >
               <img
                 src={item.image}
