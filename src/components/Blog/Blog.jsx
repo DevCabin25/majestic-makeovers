@@ -1,121 +1,136 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Blog = () => {
+const blogPosts = [
+  {
+    title: "How to Build a Skincare Routine That Glows",
+    summary:
+      "Learn how to layer your skincare products, pick the right ingredients for your skin type, and create a daily ritual that makes your skin radiate royalty.",
+    image: "https://i.ibb.co/XbGVc2D/skincare-routine.jpg",
+    author: "Queen's Beauty Journal",
+    date: "June 10, 2025",
+  },
+  {
+    title: "2025 Makeup Trends You’ll Love",
+    summary:
+      "From shimmering eyes to minimalist glam, explore the makeup looks that are taking over runways and royal courts alike in 2025.",
+    image: "https://i.ibb.co/FsK1M60/makeup-trends.jpg",
+    author: "Glam Palace Weekly",
+    date: "May 28, 2025",
+  },
+  {
+    title: "Self-Care Rituals for a Majestic Morning",
+    summary:
+      "Start your day with intentional, self-loving routines. These calming beauty rituals are perfect for a queen who rules with grace and glow.",
+    image: "https://i.ibb.co/1bbmnqf/morning-rituals.jpg",
+    author: "Royal Wellness Daily",
+    date: "April 22, 2025",
+  },
+  {
+    title: "Evening Skincare Rituals",
+    summary:
+      "Wind down like royalty. Discover the perfect nighttime routine for flawless, nourished skin and beauty sleep bliss.",
+    image: "https://i.ibb.co/XbGVc2D/skincare-routine.jpg",
+    author: "Queen's Beauty Journal",
+    date: "July 5, 2025",
+  },
+];
+
+const BlogPage = () => {
+  const [selectedPost, setSelectedPost] = useState(null);
+
+  const openModal = (post) => setSelectedPost(post);
+  const closeModal = () => setSelectedPost(null);
+
   return (
-    <div className="bg-pink-50 min-h-screen text-gray-800 font-sans px-4 py-10 md:px-16 lg:px-32">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-black">
-          Beauty Blog <span className="text-amber-200">Royal Diaries</span>
-        </h1>
-        <p className="mt-6 text-xl text-black">
-          Explore beauty secrets fit for a queen
-        </p>
-      </header>
+    <>
+      {/* Blog Section */}
+      <section className="py-20 bg-gradient-to-br from-white to-pink-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <h1 className="text-5xl font-extrabold text-gray-800">Royal Diaries</h1>
+            <p className="text-lg text-gray-600 mt-3">
+              Explore beauty secrets fit for a queen — glowing skin, elegant makeup, and self-care rituals.
+            </p>
+          </div>
 
-      {/* Articles */}
-      <section className="mb-16">
-        <h2 className="text-3xl text-center font-bold text-black mb-6">
-          Featured Articles
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Skincare Routine That Glows",
-              description:
-                "Learn to build a glowing skincare routine step-by-step.",
-            },
-            {
-              title: "2025 Makeup Trends",
-              description:
-                "Explore the latest makeup styles trending this year.",
-            },
-            {
-              title: "Majestic Morning Rituals",
-              description: "Start your day like royalty with self-care habits.",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
-            >
-              <h3 className="text-xl font-semibold text-black mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-sm">{item.description}</p>
-            </div>
-          ))}
+          {/* Blog Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {blogPosts.map((post, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col"
+              >
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="h-56 w-full object-cover"
+                />
+                <div className="p-6 flex flex-col flex-grow justify-between">
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-800">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-gray-600 mt-2">{post.summary}</p>
+                  </div>
+                  <div className="mt-4">
+                    <button
+                      onClick={() => openModal(post)}
+                      className="mt-2 inline-block px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white text-sm rounded-full transition"
+                    >
+                      Learn More
+                    </button>
+                    <p className="mt-2 text-sm text-pink-500 font-medium">
+                      {post.author} – <span className="text-gray-500">{post.date}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Before & After Gallery */}
-      <section className="mb-16">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-black mb-4">
-            Before & After Transformations
-          </h2>
-          <p className="mb-6 text-xl text-gray-700">
-            Real people. Majestic changes. See the powerful results of our
-            artistry in our transformation gallery.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Placeholder Images */}
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div
-              key={item}
-              className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition"
-            >
-              <div className="bg-gray-200 h-48 rounded mb-2"></div>
-              <p className="text-center text-sm text-gray-600">
-                Before / After
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Modal */}
+    {selectedPost && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent backdrop-blur-sm">
+    <div className="relative bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl max-w-xl w-full p-6">
+      {/* Close Button */}
+      <button
+        onClick={closeModal}
+        className="absolute top-4 right-4 text-gray-700 hover:text-red-500 text-2xl font-bold"
+        aria-label="Close"
+      >
+        &times;
+      </button>
 
-      {/* Product Reviews */}
-      <section className="mb-16 text-center">
-        <div>
-          <h2 className="text-3xl font-bold text-black mb-4">
-            Product Reviews
-          </h2>
-          <p className="mb-6 text-gray-700">
-            Only the best make it to our royal shelf:
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Top 5 Long-Wear Foundations",
-              description:
-                "Our favorite foundations that stay flawless all day.",
-            },
-            {
-              title: "Hair Serums That Actually Work",
-              description:
-                "Tried and tested serums for smoother, shinier hair.",
-            },
-            {
-              title: "Best Lipsticks for Every Skin Tone",
-              description:
-                "Find your perfect match from our top lipstick picks.",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
-            >
-              <h3 className="text-xl font-semibold text-black mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-sm">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Image */}
+      <img
+        src={selectedPost.image}
+        alt={selectedPost.title}
+        className="w-full h-56 object-cover rounded-xl mb-5"
+      />
+
+      {/* Title */}
+      <h2 className="text-2xl font-bold text-gray-800 mb-2">
+        {selectedPost.title}
+      </h2>
+
+      {/* Meta */}
+      <p className="text-sm text-pink-600 font-medium mb-4">
+        {selectedPost.author} — {selectedPost.date}
+      </p>
+
+      {/* Content */}
+      <p className="text-gray-700 text-sm leading-relaxed">
+        {selectedPost.summary}
+        {/* Replace with full content if needed */}
+      </p>
     </div>
+  </div>
+)}
+
+    </>
   );
 };
 
-export default Blog;
+export default BlogPage;
