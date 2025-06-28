@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Link
               to="/contact"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="bg-[#e60076] hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Get Started
             </Link>
@@ -167,7 +167,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/contact"
-            className="block px-3 py-2 rounded-md text-base font-medium text-white bg-purple-600 hover:bg-purple-700"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white bg-[#e60076] hover:bg-purple-700"
             onClick={() => setIsMenuOpen(false)}
           >
             Get Started

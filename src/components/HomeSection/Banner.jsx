@@ -22,7 +22,7 @@ const Banner = () => {
             Step into elegance, walk out like royalty.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="btn bg-[#DFD138] text-black btn-md rounded-xl font-semibold hover:bg-yellow-400 transition">
+            <button className="btn bg-[#e60076] text-white btn-md border border-[#e60076] rounded-xl font-semibold hover:bg-[#e60076] transition">
               Book Now
             </button>
             <button className="btn btn-outline border border-white text-white rounded-xl btn-md hover:bg-white hover:text-black transition">

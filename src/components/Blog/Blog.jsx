@@ -5,7 +5,7 @@ const blogPosts = [
     title: "How to Build a Skincare Routine That Glows",
     summary:
       "Learn how to layer your skincare products, pick the right ingredients for your skin type, and create a daily ritual that makes your skin radiate royalty.",
-    image: "https://i.ibb.co/XbGVc2D/skincare-routine.jpg",
+    image: "https://i.ibb.co/9HRgPWs3/front-view-woman-applying-face-cream.jpg",
     author: "Queen's Beauty Journal",
     date: "June 10, 2025",
   },
@@ -13,7 +13,7 @@ const blogPosts = [
     title: "2025 Makeup Trends You’ll Love",
     summary:
       "From shimmering eyes to minimalist glam, explore the makeup looks that are taking over runways and royal courts alike in 2025.",
-    image: "https://i.ibb.co/FsK1M60/makeup-trends.jpg",
+    image: "https://i.ibb.co/yc9qCvpH/woman-red-makeup-with-red-ribbon.jpg",
     author: "Glam Palace Weekly",
     date: "May 28, 2025",
   },
@@ -21,7 +21,7 @@ const blogPosts = [
     title: "Self-Care Rituals for a Majestic Morning",
     summary:
       "Start your day with intentional, self-loving routines. These calming beauty rituals are perfect for a queen who rules with grace and glow.",
-    image: "https://i.ibb.co/1bbmnqf/morning-rituals.jpg",
+    image: "https://i.ibb.co/TBwf4MW4/senior-couple-is-doing-yoga-outdoors-stretching-park-sunrise-brunette-white-t-shirt.jpg",
     author: "Royal Wellness Daily",
     date: "April 22, 2025",
   },
@@ -29,7 +29,7 @@ const blogPosts = [
     title: "Evening Skincare Rituals",
     summary:
       "Wind down like royalty. Discover the perfect nighttime routine for flawless, nourished skin and beauty sleep bliss.",
-    image: "https://i.ibb.co/XbGVc2D/skincare-routine.jpg",
+    image: "https://i.ibb.co/cXKDzWdx/Screenshot-1.png",
     author: "Queen's Beauty Journal",
     date: "July 5, 2025",
   },

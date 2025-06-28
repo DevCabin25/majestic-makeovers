@@ -33,7 +33,7 @@ const servicesData = [
     description:
       "Full-body massages, aromatherapy, and stress-relieving treatments in a tranquil setting.",
     image:
-      "https://i.ibb.co/xY6WGB5/spa-therapy-relaxing-treatment.jpg",
+      "https://i.ibb.co/d1dZPNQ/attractive-african-woman-enjoying-face-massage-spa-salon.jpg",
   },
 ];
 
